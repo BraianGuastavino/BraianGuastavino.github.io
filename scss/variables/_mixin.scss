@@ -1,0 +1,21 @@
+@import "scss/variables/vars";
+
+//Mixin para mediaQ.
+
+@mixin movil{
+    @media screen and (min-width: $break-600){
+        @content;
+    }   
+}
+
+@mixin tablet{
+    @media screen and (min-width: $break-768){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width: 900px){
+        @content;
+    }
+}
