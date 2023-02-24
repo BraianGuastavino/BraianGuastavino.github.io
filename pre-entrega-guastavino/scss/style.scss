@@ -1,0 +1,115 @@
+//Importar archivos scss
+
+@import "variables/vars";
+@import "variables/mixin";
+@import "html/home";
+@import "html/pokemon";
+@import "html/videos";
+@import "html/contacto";
+@import "html/juegos";
+
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//nesting
+
+//Header y footer
+
+.container-principal {
+    height: 100vh;
+    background-image: linear-gradient(rgba(5,7,12,0.85),rgba(5,7,12,0.85)),url(../img/fondo-poke.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    .header {
+        grid-area: header;
+        background-color: $first-color;
+        .navbar {
+            .container-fluid {
+                max-width: 80%;
+                .navbar-nav{
+                    .nav-item{
+                        a {
+                            color: $third-color;
+                            font-size: 1.2rem;
+                        }
+                    } 
+                }
+            }
+            img {
+                width: 5vh;
+            }
+        }
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        position: relative;
+        min-height: 100px;
+        background-color: $first-color;
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            @include tablet{
+                flex-wrap: wrap;
+                gap: 10px;
+                a {
+                    margin: 10px 0;
+                }
+            }
+            a {
+                margin: 0 10px;
+                font-size: 24px;
+                color: $second-color;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $third-color;
+                }
+            }
+        }
+        .footer-text {
+            text-align: center;
+            color: $four-color;
+            font-size: 14px;
+            .back-to-top-button {
+                position: fixed;
+                bottom: 45px;
+                right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3.5em;
+                height: 3.5em;
+                background-color: #007bff;
+                color: #fff;
+                border-radius: 50%;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                z-index: 9999;
+                &:hover {
+                    background-color: #0069d9;
+                }
+            }
+            p {
+                span{
+                    color: $third-color;
+                }
+            }
+        }
+    }
+}
