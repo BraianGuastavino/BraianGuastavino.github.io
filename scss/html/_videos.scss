@@ -1,0 +1,132 @@
+@import "variables/vars";
+
+// Contenedor de la página de videos, contenedor de explicion
+
+.container-videos {
+    margin: 20px;
+
+    .container-video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+
+    .image-container {
+        order: 1;
+        @include tablet{
+            order: 2;
+            flex: 1;
+            margin-left: 30px;
+        }
+
+        img {
+            width: 100%;
+            @include tablet {
+                width: 60%;
+            }
+
+            @media (min-width: 1023px) {
+                max-width: 40%;
+            }
+        }
+    }
+
+    .text-container {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+            order: 1;
+            flex: 2;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: $third-color;
+
+            @include tablet{
+                font-size: 1.6rem;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: $four-color;
+
+            @include tablet {
+                font-size: 1.3rem;
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+// Contenedor 2 de la página de videos, videos, titulo y adaptación
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    @include movil {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.card-video {
+    background-color: $first-color;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: $card-margin;
+    width: 100%;
+
+    @include movil {
+        width: calc(50% - #{$card-margin * 2});
+        margin: $card-margin;
+    }
+
+    @media (min-width: $break-900) {
+        width: calc(33.33% - #{$card-margin * 2});
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        color: $third-color;
+    }
+
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+        margin-bottom: 1rem;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
