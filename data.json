@@ -1,0 +1,20 @@
+[
+  {
+    "nameSong": "Red-Taylor's version",
+    "path": "audio/Red.m4a",
+    "image": "image/red-cover.png",
+    "artist": "Taylor Swift"
+  },
+  {
+    "nameSong": "Blank Space",
+    "path": "audio/Blank-Space.m4a",
+    "image": "image/1914-cover.png",
+    "artist": "Taylor Swift"
+  },
+  {
+    "nameSong": "Cruel Summer",
+    "path": "./audio/Cruel-Summer.m4a",
+    "image": "./image/lover-cover.png",
+    "artist": "Taylor Swift"
+  }
+]

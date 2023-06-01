@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Reproductor de Música</title>
+</head>
+
+<body>
+    <div class="music-player">
+        <audio class="songA" src=""></audio>
+        <h1 class="player-title">Taylor Swift Radio</h1>
+        <img id="imageS" src="" alt="">
+        <div class="player-artist-info">
+            <div class="artist-info">
+                <span id="title"></span>
+                <span id="artist"></span>
+            </div>
+            <i class="fa-solid fa-heart" id="liked"></i>
+        </div>
+        <div class="song-slider">
+            <input type="range" value="0" class="seek-bar">
+            <div class="slider-time">
+                <span class="current-time">00:00</span>
+                <span class="song-duration">00:00</span>
+            </div>
+        </div>
+        <div class="volume">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range" id="volumenSlider" min="0" max="1" step="0.01" value="1" />
+        </div>
+        <div class="controls">
+            <button id="btn-shuffle"><i class="fa-solid fa-shuffle"></i></button>
+            <button id="btn-backward"><i class="fa-solid fa-backward-step"></i></button>
+            <button id="btn-play" class="btn"><i class="fa-solid fa-play" id="play-pause"></i></button>
+            <button id="btn-forward"><i class="fa-solid fa-forward-step"></i></button>
+            <button id="btn-repeat"><i class="fa-solid fa-repeat" id="icon-repeat"></i></button>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+                                                                                                                

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&family=Signika&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.music-player {
+  background: #ed213a;
+  background: -webkit-linear-gradient(to bottom, #9b0127, #4a0110);
+  background: linear-gradient(to bottom, #9b0127, #4a0110);
+  width: 375px;
+  height: 667px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-title {
+  color: aliceblue;
+  font-size: 1.3rem;
+  padding:30px 0 0 0;
+}
+
+#imageS {
+  width: 325px;
+  height: 325px;
+  padding-bottom: 20px;
+}
+
+.player-artist-info {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-artist-info .artist-info {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+}
+
+.artist-info #title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.fa-heart {
+  color: aliceblue;
+  font-size: 1.1rem;
+  align-self: center;
+  cursor:pointer;
+  transition: 0.5s;
+}
+
+.fa-heart:hover{
+  color: #9b0127;
+}
+
+.song-slider {
+  width: 85%;
+}
+
+.song-slider .seek-bar {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: 10px;
+  background: darkgray;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 20px;
+  box-shadow: -400px 0 0 400px aliceblue;
+}
+
+.song-slider .slider-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-time span{
+    font-size: 0.7rem;
+    color: aliceblue;
+}
+
+.volume {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.volume .fa-volume-high {
+  font-size: 0.6rem;
+  color: aliceblue;
+  padding-right: 5px;
+}
+
+.volume #volumenSlider {
+  -webkit-appearance: none;
+  border-radius: 20px;
+  background-color: darkgray;
+  height: 7px;
+  overflow: hidden;
+}
+
+#volumenSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 40%;
+  background-color: rgb(122, 120, 120);
+  box-shadow: -400px 0 0 400px aliceblue;
+  cursor: pointer;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0 40px 0;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.controls #btn-play {
+  background: aliceblue;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.controls .fa-play,
+.fa-pause {
+  color: rgb(31, 31, 31);
+}
+
+.controls,#btn-shuffle,#btn-repeat{
+  font-size: 0.9rem;
+}
+
+.fa-shuffle:hover{
+  color: #9b0127;
+}
+
+.fa-repeat{
+  transition: 0.5s;
+}
+
+.active{
+  color: #9b0127;
+}
+
+@media (min-width: 376px) {
+  .music-player {
+    border-radius: 10px;
+  }
+}
